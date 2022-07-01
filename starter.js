@@ -245,10 +245,11 @@ const formalNames = ['Bernard', 'Elizabeth', 'Conrad', 'Mary Margaret']
 
 const formalGreeting = names => {
     // CODE HERE
+    return (newArr = names.map((name) => `Hello, ${name}`));
 }
 
 // Call formalGreeting passing in the formalNames array
-
+console.log(formalGreeting(formalNames));
 
 //// FILTER ////
 
@@ -285,6 +286,9 @@ let jobs = [
 // Do not edit the code above.
 
 // CODE HERE
+const identifier = (jobs) => jobs.filter((job) => job.programmer);
+
+console.log(identifier(jobs));
 
 // call the function passing in the jobs array
 
@@ -340,4 +344,8 @@ const expenses = [
     }
 ]
 
+
 // const remaining // = expenses.reduce(//callback, //initial value)
+const remaining = expenses.reduce((acc,expense)=>acc - expense.amount, budget) 
+
+console.log(remaining)
